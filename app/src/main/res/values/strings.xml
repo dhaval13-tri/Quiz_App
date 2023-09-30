@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="app_title">Quiz App!</string>
+    <string name="welcome">Welcome</string>
+    <string name="name_string">Please Enter Your Name</string>
+    <string name="name">Name</string>
+    <string name="btn_start">start</string>
+    <string name="text_que">What Country does this flag belongs to?</string>
+    <string name="progress_text">0/10</string>
+    <string name="option1_text">Afghanistan</string>
+    <string name="btn_submit">Submit</string>
+    <string name="result">Result</string>
+    <string name="wishes">Hey, Congratulations</string>
+    <string name="username">Username</string>
+    <string name="btn_finish">Finish</string>
+</resources>

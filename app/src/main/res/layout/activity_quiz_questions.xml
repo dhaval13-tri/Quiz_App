@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/que_background"
+    tools:context=".QuizQuestionsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/text_que"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          tools:text="@string/text_que"
+          android:layout_marginHorizontal="20sp"
+          android:textSize="22sp"
+          android:textColor="@color/black"
+          android:layout_marginTop="30sp"
+          app:layout_constraintBottom_toTopOf="@id/image_que"
+          app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_que"
+            android:layout_width="200sp"
+            android:layout_height="160sp"
+            app:layout_constraintTop_toBottomOf="@id/text_que"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/progressBar"
+            tools:src="@drawable/ic_afghanistan"/>
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:layout_marginTop="18sp"
+            android:id="@+id/progressBar"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15sp"
+            android:padding="14sp"
+            android:max="10"
+            android:progress="0"
+            style="?attr/progressBarStyle"
+            android:indeterminate="false"
+            android:minHeight="50dp"
+            app:layout_constraintEnd_toStartOf="@id/text_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_que" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_marginTop="18sp"
+            android:id="@+id/text_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15sp"
+            android:gravity="center"
+            android:padding="5sp"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/image_que"
+            tools:text="@string/progress_text" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_option1"
+            android:padding="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/option1_text"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40sp"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/option_border"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_option2"
+            android:padding="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/option1_text"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40sp"
+            app:layout_constraintTop_toBottomOf="@id/text_option1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/option_border"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_option3"
+            android:padding="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/option1_text"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40sp"
+            app:layout_constraintTop_toBottomOf="@id/text_option2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/option_border"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_option4"
+            android:padding="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:text="@string/option1_text"
+            android:layout_marginHorizontal="20sp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="40sp"
+            app:layout_constraintTop_toBottomOf="@id/text_option3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/option_border"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:text="@string/btn_submit"
+            app:layout_constraintTop_toBottomOf="@+id/text_option4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="40sp"
+            app:cornerRadius="20sp"
+            android:layout_marginTop="20sp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
